@@ -2,7 +2,7 @@
 sha256 checksum verifier
 This is a simple script to verify the integrity of a file or package.
 
-I have used the base script from https://www.quickprogrammingtips.com/python/how-to-calculate-sha256-hash-of-a-file-in-python.html and added my on flavor.
+I have used the base script from https://www.quickprogrammingtips.com/python/how-to-calculate-sha256-hash-of-a-file-in-python.html and added my own flavor.
 
 Let me know if you like it or not, or how I can improve.
 
