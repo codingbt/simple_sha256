@@ -20,7 +20,7 @@ def verify_checksum():
     print("Enter Checksum Provided by Authorized Distrubutor or Developer...")
     given_checksum = input()
     print(Color.PURPLE + "You entered: " + given_checksum)
-    print(Color.GREEN + "Calculated :" + sha256_hash.hexdigest())
+    print(Color.GREEN + "Calculated : " + sha256_hash.hexdigest())
     if given_checksum == sha256_hash.hexdigest():
         safe_result = (Color.BOLD + Color.GREEN + "Checksum Verfied! File is OK.")
         print(safe_result)
