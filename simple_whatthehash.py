@@ -1,3 +1,4 @@
+"""Module for finding hash value for files"""
 import hashlib
 class Color:
 
@@ -14,13 +15,15 @@ class Color:
     END = '\033[0m'
 
 def color_reset():
+    """Function for reseting color modifications"""
     print(Color.END)
 
 def verify_checksum():
+    """Function for comparing calcuated hash with hash provided by developer"""
     print("Enter Checksum Provided by Authorized Distrubutor or Developer...")
     given_checksum = input()
     print(Color.PURPLE + "You entered: " + given_checksum)
-    print(Color.GREEN + "Calculated : " + sha256_hash.hexdigest())
+#    print(Color.GREEN + "Calculated : " + sha256_hash.hexdigest())
     if given_checksum == sha256_hash.hexdigest():
         safe_result = (Color.BOLD + Color.GREEN + "Checksum Verfied! File is OK.")
         print(safe_result)
@@ -34,7 +37,8 @@ sha256_hash = hashlib.sha256()
 with open(filename, "rb") as f:
     for byte_block in iter(lambda: f.read(4096),b""):
         sha256_hash.update(byte_block)
-    print(Color.GREEN + "sha256 valule = " + sha256_hash.hexdigest())
+#    print(Color.GREEN + "sha256 valule = " + sha256_hash.hexdigest())
+    print(Color.DARKCYAN + "sha256 value has been calculated")
     color_reset()
 
 verify_checksum()
